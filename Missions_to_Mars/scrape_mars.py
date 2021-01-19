@@ -86,10 +86,10 @@ def scrape():
     USGS_soup = BeautifulSoup(USGS_html, 'html.parser')
 
     # scrape with bs
-    list = USGS_soup.find_all('div', class_='item')
+    items = USGS_soup.find_all('div', class_='item')
 
     # loop through list
-    for item in list:
+    for item in items:
 
         # title into variable
         title = item.find('h3').text
